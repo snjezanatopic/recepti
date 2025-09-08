@@ -17,6 +17,115 @@ body {
 }
 
 
+
+
+
+
+
+#auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    width: 300px !important;
+}
+
+
+#add-recipe {
+    margin-left: 10px;
+    padding: 8px 16px;
+    width: 99% !important; /* Širina gumba sada zauzima 99% širine roditeljskog elementa */
+} 
+
+
+#naslov {
+    text-align: left;
+    font-size: 28px;
+    color: #1d1b1a;
+    margin-left: 10px;
+}
+
+#your-recipes {
+    margin-top: -100px;
+}
+
+#recipe-form {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#recipe-title, #recipe-details {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+#recipe-details {
+    height: 100px;
+    resize: both; /* Omogućava korisniku da promijeni veličinu tekstualnog područja okomito i horizontalno  */
+}
+
+
+#recipes-list {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 80%;
+
+
+}
+
+.recipe-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 150px; 
+    left: 0px;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+} 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Zaglavlje */
 header {
     background-color: #ff6347; 
@@ -86,12 +195,12 @@ section h2{
 }
 
 
-#prijava-registracija-vasi-recepti {
+/* #prijava-registracija-vasi-recepti {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 
-}
+} */
 
 
 /*
@@ -222,37 +331,6 @@ h2 {
 } 
 
 
-/*desna strana - vaši recepti, prijava, registracija*/
-.vasirecepti {
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    height: 120px;
-    padding: 10px;
-    flex-grow: 0.5;
-}
-
-
-.prijava {
-   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-   width: 400px;
-   height: 120px;
-   padding: 10px;
-   background-color: whitesmoke;
-   flex-grow: 0.5;
- }
-
- .registracija {
-     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-     width: 400px;
-     height: 120px;
-     padding: 10px;
-     background-color: whitesmoke;
-     flex-grow: 0.5;
-}
-
-
-
-
 /*lijeva strana*/
 
 .voce {
@@ -293,7 +371,7 @@ h2 {
 .clanci {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     width: 400px;
-    height: 600px;
+    height: 300px;
     overflow: auto;
 }
 
@@ -534,11 +612,11 @@ h2 {
 
 
 
-#kolaci-koji-se-ne-peku {
+#kolaci-bez-pecenja {
     background-color: #fce3d9;
 }
 
-#recepti-kolaci-koji-se-ne-peku {
+#recepti-kolaci-bez-pecenja {
     max-width: 2200px;
 }
 
@@ -729,57 +807,6 @@ h2 {
 
 
 
-/*prijava i registracija - posebne stranice*/
-
-
-
-            #prijava {
-                background-color: #6a6b6b;
-                font-size: 25px;
-                color: wheat;
-                font-family: Arial, Helvetica, sans-serif; 
-            }
-
-            aside {
-                  padding: 10px;
-                 text-align: center;
-                 box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
-                  text-align: center;
-            }
-
-            #prijava button {
-                width: 10% !important;
-            }
-
-             #prijava h2 {
-                color: wheat;
-            }
-
-
-
-          #registracija {
-                background-color: #6a6b6b;
-                font-size: 25px;
-                color: wheat;
-                font-family: Arial, Helvetica, sans-serif;  
-            }
-
-            aside {
-                  padding: 10px;
-                 text-align: center;
-                 box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
-                  text-align: center;
-            }
-
-            #registracija button {
-                width: 10% !important;
-            }
-
-            #registracija h2 {
-                color: wheat;
-            }
-
-
 /*kontakt i o nama - posebne stranice*/
 
              #kontakt {
@@ -855,13 +882,88 @@ h2 {
 
 @media (max-width: 1480px) {
     .lijeva-strana {
-        order: 2;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+         order: 2;
+    }
 
+    .naslov-namirnice {
+        order: 1;
+        position: static; /* Vraća na normalan tok dokumenta */
+        margin-bottom: 20px; /* Dodaje razmak ispod naslova */
+        text-align: center; /* Centriranje naslova */
+        margin-top: auto;
+    }
 }
 
-    #namirnice-i-recepti {
-    order: 1;
+
+
+.voce {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    overflow: auto;
 }
 
 
+.povrce {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    overflow: auto;
 }
+
+.orasasti-plodovi {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    overflow: auto;
+}
+
+
+.sjemenke {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    overflow: auto;
+}
+
+
+.clanci {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 300px;
+    overflow: auto;
+}
+
+
+
+@media (max-width: 983px) {
+.voce, .povrce, .orasasti-plodovi, .sjemenke, .clanci {
+width: 300px;
+height: 200px;
+}
+
+.recipe-card {
+    width: 88%;
+    max-width: 300px;
+    height: auto; /* Visina se prilagođava sadržaju */
+}
+}
+
+@media (max-width: 661px) {
+.voce, .povrce, .orasasti-plodovi, .sjemenke, .clanci {
+width: 250px;
+    }
+
+.recipe-card {
+    width: 200px;
+    height: auto; /* Visina se prilagođava sadržaju */
+}    
+}
+

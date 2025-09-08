@@ -50,7 +50,7 @@
                         <a href="strudle-i-pite.html">ŠTRUDLE I PITE</a>
                         <a href="palacinke.html">PALAČINKE</a>
                         <a href="sladoled.html">SLADOLED</a>
-                        <a href="kolaci-koji-se-ne-peku.html">KOLAČI KOJI SE NE PEKU</a>
+                        <a href="kolaci-bez-pecenja.html">KOLAČI BEZ PEČENJA</a>
                         </div>
                 </li>
 
@@ -59,9 +59,6 @@
                 <li class="smoothie">
                     <a href="#smoothie">Smoothie</a>
                     <div class="smoothie-opcije">
-                        <!--   <a href="vocni-smoothie.html">VOČNI SMOOTHIE</a>
-                   <a href="smoothie-od-povrca.html">SMOOTHIE OD POVRČA</a>
-                   <a href="smoothie-za-ciscenje-organizma.html">SMOOTHIE ZA ČIŠČENJE ORGANIZMA</a>   -->
                         <a href="razni-smoothie.html">RAZNI SMOOTHIE</a>
                     </div>
                 </li>
@@ -80,22 +77,22 @@
         </nav>
 
    </header>
-    <br>
+   
 
 
  <main id="prijava-registracija-vasi-recepti">
                
-                    <div class="vasirecepti">
+                 <!-- <div class="vasirecepti">
                         <h3>Vaši recepti:</h3>
                         <br>
                         <label for="fotografija">Vaš recept:</label><br>
                         <input type="file" name="recept" id="fotografija" multiple accept=".jpg, .png, .gif, .webp">
                     </div>
-                
+                <br><br>
 
 
             
-                    <div class="prijava">
+                 <div class="prijava">
                         <h3>Prijava:</h3>
                         <a href="prijava.html" target="_blank" class="button"><b>PRIJAVA</b></a>
                     </div>
@@ -107,20 +104,46 @@
                     <div class="registracija">
                         <h3>Registracija:</h3>
                         <a href="registracija.html" target="_blank" class="button"><b>REGISTRACIJA</b></a>
-                    </div>
-               
+                    </div>  -->
+
+
+
+        
+        <h2 id="naslov">Moji recepti:</h2>
+        <div id="auth-buttons">
+            <button id="btn-login">Prijava</button>
+            <button id="btn-register">Registracija</button>
+            <button id="btn-logout" style="display:none;">Odjava</button>
+        </div>
+
+
+
+    <!-- Modali za prijavu i registraciju -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <div id="form-container"></div>
+        </div>
+    </div>
+
+    <!-- Dio "Vaši recepti" -->
+    <section id="your-recipes" style="display:none;"> 
+        <h2>Vaši recepti:</h2>
+        <form id="recipe-form">
+            <input type="text" id="recipe-title" placeholder="Naziv recepta" required />
+            <textarea id="recipe-details" placeholder="Opis recepta" required></textarea>
+            <button id="add-recipe" type="submit">Dodaj recept</button>
+        </form>
+        <div id="recipes-list"></div>
+    </section>
+
+  
+
+
             </main>
 
-
-
-            <br>
-           <hr>
+            
            <br><br>
-
-
-
-
-
 
     <main id="naslovna">
         
@@ -220,10 +243,10 @@
         
       <div class="lijeva-strana">
             <section class="voce">
-                <h2>Voće</h2>
+               <h2>Voće</h2>
                 <br>
-                <!-- <ul>
-                    <li><a href="https://www.kaufland.hr/asortiman/leksikon-namirnica/povrce/vocno-povrce/lubenica.html"
+                <ul>
+                     <li><a href="https://www.kaufland.hr/asortiman/leksikon-namirnica/povrce/vocno-povrce/lubenica.html"
                             target="_blank"><b><i>LUBENICA</i></b> - slatka i sočna</a></li>
                     <li><a href="https://alternativa-za-vas.com/index.php/clanak/article/dinja"
                             target="_blank"><b><i>DINJA</i></b> - ljekovita svojstva</a></li>
@@ -261,14 +284,14 @@
                             target="_blank"><b><i>KUPINE</i></b> - bobičasto voće koje bismo trebali jesti više puta
                             tjedno, evo zašto</a></li>
                     <li><a href="https://ordinacija.vecernji.hr/zdravi-tanjur/jedi-zdravo/7-superzdravih-cinjenica-o-malini/"
-                            target="_blank"><b><i>MALINA</i></b> - 7 superzdravih činjenica o malini</a></li>
-                </ul> -->
+                            target="_blank"><b><i>MALINA</i></b> - 7 superzdravih činjenica o malini</a></li>   
+                </ul>
             </section>
 
             <section class="povrce">
                 <h2>Povrće</h2>
                 <br>
-                <ul>
+                 <ul>
                     <li><a href="https://www.fitness.com.hr/prehrana/nutricionizam/Grah.aspx"
                             target="_blank"><b><i>GRAH</i></b> - koje su njegove vrijednosti i zašto bi ga trebali imati
                             u svom jelovniku?</a></li>
@@ -319,7 +342,7 @@
                     <li><a href="https://eklinika.telegraf.rs/ishrana/60148-rotkvice-pomazu-jetri-i-bubrezima-u-radu-a-ko-ne-bi-trebalo-da-ih-konzumira-u-velikim-kolicinama" target="_blank"><b><i>ROTKVICE</i></b> - Rotkvice pomažu jetri i bubrezima u radu</a></li>
                     <li><a href="https://www.kaufland.hr/asortiman/leksikon-namirnica/povrce/kupusnjace/cvjetaca.html" target="_blank"><b><i>CVJETAČA</i></b>Cvjetača: malo kalorija, puno okusa</a></li>
                     <li><a href="https://feelgoodpal.com/hr/blog/health-benefits-of-broccoli/" target="_blank"><b><i>BROKULA</i></b> - Zdravstvene prednosti brokule</a></li>
-                </ul>
+                </ul> 
             </section>
             <section class="orasasti-plodovi">
                 <h2>Orašasti plodovi</h2>
@@ -383,7 +406,7 @@
                     <li><a href="https://www.naturala.hr/10-top-namirnica-za-zdravu-blistavu-kozu-i-predivan-ten/" target="_blank">10 TOP namirnica za zdravu, blistavu kožu i predivan ten</a></li>
                     <li><a href="https://net.hr/magazin/zdravlje/prehrana-za-zdrave-i-jake-nokte-4edac024-b1c6-11eb-adf2-0242ac140023" target="_blank">Za jake i zdrave nokte ovo je najvažnije</a></li>
                     <li><a href="https://krugzdravlja.rs/zdrava-ishrana/" target="_blank">Zdrava ishrana: 15 pravila koja će vam unaprediti zdravlje</a></li>
-                </ul>
+                </ul> 
 
             </section>
 
@@ -399,6 +422,8 @@
     </footer>
 
     <script src="js/script.js"></script>
+  
+   
 
 </body>
 
